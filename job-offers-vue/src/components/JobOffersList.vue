@@ -28,6 +28,9 @@ export default {
     computed: {
         ...mapStores(useStore),
         
+    },
+    mounted() {
+        this.mainStore.fetchJobOffers();
     }
 }
 </script>
