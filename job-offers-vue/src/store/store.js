@@ -9,7 +9,7 @@ export const useStore = defineStore('main', {
     },
     actions: {
         async fetchJobOffers() {
-                this.jobOffers = await axios.get('localhost:8080/joboffers')
-        }
+                this.jobOffers = await (await axios.get('http://localhost:8080/joboffers')).data;
+            }
     }
 })
