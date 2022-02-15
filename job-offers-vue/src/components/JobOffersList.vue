@@ -5,11 +5,7 @@
         </div>
         <div class="job-offers-list">
             <div v-for="offer in mainStore.jobOffers" key="offer.id">
-                <div class="offer flex">
-                    <span>{{ offer.name }}</span>
-                    <span>{{ offer.description }}</span>
-                    <span>{{ offer.city }}</span>
-                </div>
+                <JobOffer :jobOffer="offer"/>
             </div>
         </div>
     </div>
@@ -18,8 +14,12 @@
 <script>
 import { mapStores } from 'pinia';
 import { useStore } from '../store/store.js';
+import JobOffer from './JobOffer.vue';
 
 export default {
+    components: {
+        JobOffer
+    },
     data() {
         return {
             
