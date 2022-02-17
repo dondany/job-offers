@@ -9,7 +9,7 @@
                 <span>{{ jobOffer.name }}</span>
             </div>
             <div class="company-details flex">
-            <span>Company Name</span>
+            <span>{{ jobOffer.companyName }}</span>
             <span>{{ jobOffer.city }}</span>
         </div>
         </div>
@@ -64,7 +64,7 @@ export default defineComponent({
             font-size: 0.8rem;
 
             span {
-                margin-right: 10px;
+                margin-right: 15px;
             }
         }
     }
