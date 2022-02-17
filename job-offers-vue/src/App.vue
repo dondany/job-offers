@@ -1,15 +1,18 @@
 <template>
   <div class="app flex">
+    <NavBar/>
     <JobOffersList />
   </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar.vue'
 import JobOffersList from './components/JobOffersList.vue'
 
 export default {
   name: 'App',
   components: {
+    NavBar,
     JobOffersList
   }
 }
@@ -23,6 +26,10 @@ export default {
   font-family: "Poppins", sans-serif;
 }
 
+body {
+  background-color: rgb(235,235,235);
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,10 +37,6 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
-
-.app {
-  justify-content: center;  
 }
 
 .flex {

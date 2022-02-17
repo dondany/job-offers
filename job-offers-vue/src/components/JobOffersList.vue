@@ -1,8 +1,5 @@
 <template>
     <div class="job-offers-list-wrap">
-        <div class="title flex">
-            <h1>Job-Offers</h1>
-        </div>
         <div class="job-offers-list">
             <div v-for="offer in mainStore.jobOffers" key="offer.id">
                 <JobOffer :jobOffer="offer"/>
@@ -36,8 +33,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.title {
-    justify-content: center;
+.job-offers-list-wrap {
+    width: 100%;
 }
 </style>
