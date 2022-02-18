@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" >
 * {
   margin: 0;
   padding: 0;
@@ -45,5 +45,25 @@ body {
 
 .flex-column {
   flex-direction: column;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+
+
+}
+
+.btn-blue {
+    color: #fff;
+    background-color: #549eff;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: #426fc9;
+    }
 }
 </style>

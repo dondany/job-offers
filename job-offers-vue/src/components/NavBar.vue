@@ -6,7 +6,9 @@
           </div>
       </div>
       <div class="right">
-
+          <button class="btn btn-blue">
+              Employer panel
+          </button>
       </div>
   </div>
 </template>
@@ -18,11 +20,12 @@
     top:0;
     height: 50px;
     width: 100%;
-    padding-left: 25px;
+    padding: 25px;
     border-bottom: 1px solid rgba(0,0,0,.2);
     background-color: white;
 
     align-items: center;
+    justify-content: space-between;
 
     .title {
 
@@ -33,5 +36,6 @@
         }
     }
 }
+
 </style>
 
