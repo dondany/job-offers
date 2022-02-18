@@ -11,14 +11,16 @@ public class JobOffer {
     private String name;
     private String description;
     private String city;
+    private String companyName;
 
     public JobOffer() {
     }
 
-    public JobOffer(String name, String description, String city) {
+    public JobOffer(String name, String description, String city, String companyName) {
         this.name = name;
         this.description = description;
         this.city = city;
+        this.companyName = companyName;
     }
 
     public Long getId() {
@@ -53,6 +55,14 @@ public class JobOffer {
         this.city = city;
     }
 
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -61,12 +71,13 @@ public class JobOffer {
         return Objects.equals(id, jobOffer.id) &&
                 Objects.equals(name, jobOffer.name) &&
                 Objects.equals(description, jobOffer.description) &&
-                Objects.equals(city, jobOffer.city);
+                Objects.equals(city, jobOffer.city) &&
+                Objects.equals(companyName, jobOffer.companyName);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, city);
+        return Objects.hash(id, name, description, city, companyName);
     }
 
     @Override
@@ -76,6 +87,7 @@ public class JobOffer {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", city='" + city + '\'' +
+                ", companyName='" + companyName + '\'' +
                 '}';
     }
 }

@@ -12,9 +12,9 @@ public class DataLoader {
     @Bean
     CommandLineRunner initDb(JobOfferRepository repostiory) {
         return args -> {
-            repostiory.save(new JobOffer("Junior Java Developer", "We're hiring a Junior Java Developer. Join us now!", "Lodz"));
-            repostiory.save(new JobOffer("Senior Java Developer", "We're hiring a Senior Java Developer. Join us now!", "Lodz"));
-            repostiory.save(new JobOffer("QA Specialist", "We're hiring a QA Specialist. Join us now!", "Wroclaw"));
+            repostiory.save(new JobOffer("Junior Java Developer", "We're hiring a Junior Java Developer. Join us now!", "Lodz", "Yolomax"));
+            repostiory.save(new JobOffer("Senior Java Developer", "We're hiring a Senior Java Developer. Join us now!", "Lodz","Yolomax"));
+            repostiory.save(new JobOffer("QA Specialist", "We're hiring a QA Specialist. Join us now!", "Wroclaw", "Fishon"));
         };
     }
 }

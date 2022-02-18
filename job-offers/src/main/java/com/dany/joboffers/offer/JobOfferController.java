@@ -35,6 +35,7 @@ public class JobOfferController {
                     jobOffer.setName(newJobOffer.getName());
                     jobOffer.setDescription(newJobOffer.getDescription());
                     jobOffer.setCity(newJobOffer.getCity());
+                    jobOffer.setCompanyName((newJobOffer.getCompanyName()));
                     return repository.save(jobOffer);
                 })
                 .orElseGet(() -> {
