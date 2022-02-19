@@ -11,7 +11,7 @@
 <script>
 import { mapStores } from 'pinia';
 import { useStore } from '../store/store.js';
-import JobOffer from './JobOffer.vue';
+import JobOffer from '../components/JobOffer.vue';
 
 export default {
     components: {

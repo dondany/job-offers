@@ -2,13 +2,17 @@
   <div class="nav-bar-wrap flex">
       <div class="left">
           <div class="title">
-              <a href="#">job-offers</a>
+              <router-link to="/">
+                <a>job-offers</a>
+              </router-link>
           </div>
       </div>
       <div class="right">
-          <button class="btn btn-blue">
-              Employer panel
-          </button>
+          <router-link to="/employerPanel">
+            <button class="btn btn-blue">  
+                Employer panel
+            </button>
+            </router-link>
       </div>
   </div>
 </template>

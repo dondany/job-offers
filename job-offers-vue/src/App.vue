@@ -1,19 +1,18 @@
 <template>
   <div class="app flex">
     <NavBar/>
-    <JobOffersList />
+    <router-view/>
+    <!-- <JobOffersList /> -->
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
-import JobOffersList from './components/JobOffersList.vue'
 
 export default {
   name: 'App',
   components: {
-    NavBar,
-    JobOffersList
+    NavBar
   }
 }
 </script>
