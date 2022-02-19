@@ -1,23 +1,27 @@
 <template>
     <div class="job-offer-wrap panel flex">
-        <div class="left">
-            COMPANY<br>LOGO
-        </div>
         
         <div class="mid flex flex-column">
             <div class="name">
                 <span>{{ jobOffer.name }}</span>
             </div>
             <div class="company-details flex">
-            <span>{{ jobOffer.companyName }}</span>
-            <span>{{ jobOffer.city }}</span>
-        </div>
+                <span>{{ jobOffer.companyName }}</span>
+                <span>{{ jobOffer.city }}</span>
+            </div>
         </div>
 
         <div class="right">
-
         </div>
 
+        <div class="actions flex">
+            <div class="btn btn-green action flex">
+                X
+            </div>
+            <div class="btn btn-red action flex">
+                Y
+            </div>
+        </div>
         
     </div>
 </template>
@@ -33,10 +37,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .job-offer-wrap {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     cursor: pointer;
-    margin: 0 10px 5px 10px;
+    margin: 0 0 5px 10px;
 
     &:hover {
         box-shadow: 0px 13px 20px -15px rgba(66, 68, 90, 0.4);
@@ -61,6 +65,24 @@ export default defineComponent({
             span {
                 margin-right: 15px;
             }
+        }
+    }
+
+    .actions {
+        gap: 5px;
+
+        .action {
+            width: 2rem;
+            height: 2rem;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            display: none;
+
+            :hover > & {
+                display: block;
+            }
+
         }
     }
 

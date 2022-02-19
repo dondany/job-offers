@@ -65,4 +65,32 @@ body {
         background-color: #426fc9;
     }
 }
+
+.btn-green {
+    color: #fff;
+    background-color: #2dbd54;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: #218f3f;
+    }
+}
+
+.btn-red {
+    color: #fff;
+    background-color: #fa3939;
+    font-size: 1rem;
+
+    &:hover {
+        background-color: #b82727;
+    }
+}
+
+.panel {
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 15px 10px 15px 10px;
+  background-color: #fff;
+  box-shadow: 0px 10px 25px -22px rgba(66, 68, 90, 0.3);
+}
 </style>
