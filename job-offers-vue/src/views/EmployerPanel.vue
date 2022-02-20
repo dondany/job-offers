@@ -19,6 +19,7 @@
         <div class="right flex flex-column">
             <JobOffersList/>
         </div>
+        
     </div>
 </template>
 
@@ -28,6 +29,10 @@ import JobOffersList from '../components/JobOffersListEmployer.vue'
 export default {
     components: {
         JobOffersList
+    },
+    data() {
+        return {
+        }
     },
 };
 </script>
@@ -41,12 +46,13 @@ export default {
         max-width: 250px;
         flex-basis: 25%;
         gap: 5px;
-        background-color: #4287f5;
-        color: #fff;
+        //background-color: #4287f5;
+        color: #919191;
         align-items: center;
         padding: 0;
 
         .title {
+            color: #454545;
             width: 100%;
             font-size: 1.2rem;
             font-weight: 700;
@@ -65,9 +71,8 @@ export default {
                 text-align: left;
 
                 &:hover {
-                    // color: #fff;
-                    color: #243745;
-                    background-color: #fff;
+                    color: #fff;
+                    background-color: #5EC393;
                 }
             }
         }

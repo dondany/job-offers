@@ -9,7 +9,7 @@
       </div>
       <div class="right">
           <router-link to="/employerPanel">
-            <button class="btn btn-blue">  
+            <button class="btn btn-green">  
                 Employer panel
             </button>
             </router-link>

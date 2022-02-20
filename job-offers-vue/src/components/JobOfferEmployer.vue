@@ -15,23 +15,40 @@
         </div>
 
         <div class="actions flex">
-            <div class="btn btn-green action flex">
+            <div @click="open('editJobOffer')" class="btn btn-green action flex">
                 X
             </div>
             <div class="btn btn-red action flex">
                 Y
             </div>
-        </div>
-        
+        </div> 
+
+        <EditJobOffer/>
     </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
+import { mapStores } from 'pinia';
+import { useStore } from '../store/modals.js';
+
+import EditJobOffer from '../components/EditJobOffer.vue'
+
 
 export default defineComponent({
+    name: "JobOfferEmployer",
     props: ['jobOffer'],
-  
+    components: {
+        EditJobOffer
+    },
+    computed: {
+        ...mapStores(useStore),
+    },
+    methods: {
+        open(name) {
+            this.modalsStore.open(name);
+        }
+    }
 });
 </script>
 
@@ -39,7 +56,6 @@ export default defineComponent({
 .job-offer-wrap {
     justify-content: space-between;
     align-items: flex-start;
-    cursor: pointer;
     margin: 0 0 5px 10px;
 
     &:hover {

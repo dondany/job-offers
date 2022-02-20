@@ -56,33 +56,23 @@ body {
 
 }
 
-.btn-blue {
-    color: #fff;
-    background-color: #549eff;
-    font-size: 1rem;
-
-    &:hover {
-        background-color: #426fc9;
-    }
-}
-
 .btn-green {
     color: #fff;
-    background-color: #2dbd54;
+    background-color: #5EC393;
     font-size: 1rem;
 
     &:hover {
-        background-color: #218f3f;
+        background-color: #4ea37b;
     }
 }
 
 .btn-red {
     color: #fff;
-    background-color: #fa3939;
+    background-color: #ba5959;
     font-size: 1rem;
 
     &:hover {
-        background-color: #b82727;
+        background-color: #944747;
     }
 }
 
