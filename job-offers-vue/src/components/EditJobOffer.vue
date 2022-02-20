@@ -1,5 +1,5 @@
 <template>
-    <ModalPanel name="editJobOffer">
+    <ModalPanel name="editJobOffer" title="Edit Offer">
         
     </ModalPanel>
 </template>
