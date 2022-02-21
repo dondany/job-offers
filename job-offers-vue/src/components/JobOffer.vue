@@ -6,11 +6,11 @@
         
         <div class="mid flex flex-column">
             <div class="name">
-                <span>{{ jobOffer.name }}</span>
+                <span>{{ offer.name }}</span>
             </div>
             <div class="company-details flex">
-            <span>{{ jobOffer.companyName }}</span>
-            <span>{{ jobOffer.city }}</span>
+            <span>{{ offer.companyName }}</span>
+            <span>{{ offer.city }}</span>
         </div>
         </div>
 
@@ -26,7 +26,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-    props: ['jobOffer'],
+    props: ['offer'],
   
 });
 </script>

@@ -3,11 +3,11 @@
         
         <div class="mid flex flex-column">
             <div class="name">
-                <span>{{ jobOffer.name }}</span>
+                <span>{{ offer.name }}</span>
             </div>
             <div class="company-details flex">
-                <span>{{ jobOffer.companyName }}</span>
-                <span>{{ jobOffer.city }}</span>
+                <span>{{ offer.companyName }}</span>
+                <span>{{ offer.city }}</span>
             </div>
         </div>
 
@@ -23,7 +23,7 @@
             </div>
         </div> 
 
-        <EditJobOffer/>
+        <EditJobOffer :offer="offer"/>
     </div>
 </template>
 
@@ -37,7 +37,7 @@ import EditJobOffer from '../components/EditJobOffer.vue'
 
 export default defineComponent({
     name: "JobOfferEmployer",
-    props: ['jobOffer'],
+    props: ['offer'],
     components: {
         EditJobOffer
     },

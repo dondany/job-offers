@@ -8,6 +8,9 @@
                 <span class="title">{{ title }}</span>
                 <button @click="close" class="btn btn-neutral flex">x</button>
             </div>
+            <div class="main">
+                <slot></slot>
+            </div>
         </div>
     </div>
 </template>
@@ -74,6 +77,10 @@ export default {
                 align-items: center;
                 justify-content: center;
             }
+        }
+
+        .main {
+            height: 100%;
         }
     }
 }

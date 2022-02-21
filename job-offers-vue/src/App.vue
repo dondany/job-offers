@@ -57,8 +57,6 @@ body {
 .btn-neutral {
   color: #485059;
   background-color: transparent;
-  //border: 2px solid #a3a3a3;
-  border-radius: 50%;
 
   &:hover {
     background-color: rgba(0,0,0,0.1);

@@ -2,7 +2,7 @@
     <div class="job-offers-list-wrap">
         <div class="job-offers-list">
             <div v-for="offer in mainStore.jobOffers" key="offer.id">
-                <JobOffer :jobOffer="offer"/>
+                <JobOffer :offer="offer"/>
             </div>
         </div>
     </div>
