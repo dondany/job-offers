@@ -31,6 +31,7 @@
 import { defineComponent } from 'vue';
 import { mapStores } from 'pinia';
 import { useStore } from '../store/modals.js';
+import editOfferStore from '../store/editOffer.js';
 
 import EditJobOffer from '../components/EditJobOffer.vue'
 
@@ -42,11 +43,12 @@ export default defineComponent({
         EditJobOffer
     },
     computed: {
-        ...mapStores(useStore),
+        ...mapStores(useStore, editOfferStore),
     },
     methods: {
         open(name) {
             this.modalsStore.open(name);
+            this.editOfferStore.offer = this.offer;
         }
     }
 });

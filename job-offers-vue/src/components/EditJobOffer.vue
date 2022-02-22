@@ -3,13 +3,13 @@
         <div class="edit-offer flex flex-column">
             <form action="" class="flex flex-column">
                 <label for="name">Name</label>
-                <input type="text" class="name input" id="name" v-model="name">
+                <input type="text" class="name input" id="name" v-model="editOfferStore.offer.name">
 
                 <label for="desc">Description</label>
-                <textarea name="desc" id="desc" class="input" v-model="description"></textarea>
+                <textarea name="desc" id="desc" class="input" v-model="editOfferStore.offer.description"></textarea>
                 
                 <label for="city">City</label>
-                <input type="text" class="city input" id="city" v-model="city">
+                <input type="text" class="city input" id="city" v-model="editOfferStore.offer.city">
             </form>
             <div class="bottom flex">
                 <button class="btn btn-green">Save</button>
@@ -21,6 +21,9 @@
 <script>
 import ModalPanel from '../components/ModalPanel.vue'
 
+import { mapStores } from 'pinia';
+import editOfferStore from '../store/editOffer.js';
+
 export default {
     name: "EditJobOffer",
     props: ['offer'],
@@ -29,10 +32,10 @@ export default {
     },
     data() {
         return {
-            name: this.offer.name,
-            description: this.offer.description,
-            city: this.offer.city,
         }
+    },
+    computed: {
+        ...mapStores(editOfferStore),
     }
 };
 </script>
